@@ -1,0 +1,82 @@
+.wallet-flow-shell { min-height: 100svh; background: var(--background); }
+.wallet-flow-header { display: flex; align-items: center; gap: 24px; min-height: 88px; padding: 20px clamp(24px, 4vw, 64px); border-bottom: 1px solid var(--outline); }
+.wallet-flow-headerLabel { padding-left: 24px; border-left: 1px solid var(--outline); color: var(--muted-text); font-size: 13px; }
+.wallet-flow-back { margin-left: auto; display: inline-flex; align-items: center; gap: 12px; min-height: 44px; font-size: 13px; }
+.wallet-flow-back svg, .wallet-flow-primary svg { width: 20px; height: 20px; flex: none; }
+.wallet-flow-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(48px, 8vw, 128px); max-width: 1248px; margin: 0 auto; padding: 80px 40px; align-items: start; }
+.wallet-flow-intro { padding-top: 20px; }
+.wallet-flow-eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 32px; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.wallet-flow-title { margin: 0; font-size: clamp(42px, 4.5vw, 64px); font-weight: 600; letter-spacing: -.065em; line-height: 1.06; }
+.wallet-flow-title > span { display: block; color: var(--muted-text); }
+.wallet-flow-description { max-width: 340px; margin: 24px 0 0; font-size: 16px; line-height: 1.65; color: var(--muted-text); }
+.wallet-flow-steps { list-style: none; margin: 56px 0 0; padding: 0; max-width: 340px; }
+.wallet-flow-steps li { display: flex; gap: 18px; padding: 18px 0; border-top: 1px solid var(--outline); }
+.wallet-flow-stepNumber { font-size: 12px; color: var(--muted-text); font-variant-numeric: tabular-nums; padding-top: 3px; }
+.wallet-flow-steps li[data-active] .wallet-flow-stepNumber { color: var(--foreground); font-weight: 700; }
+.wallet-flow-steps p { margin: 0 0 4px; font-size: 14px; font-weight: 600; }
+.wallet-flow-steps li div > span { font-size: 13px; line-height: 1.5; color: var(--muted-text); }
+.wallet-flow-panel { min-width: 0; border: 1px solid var(--outline); border-radius: 20px; background: var(--menu-bg); overflow: hidden; }
+.wallet-flow-panelHeader { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 24px 32px; border-bottom: 1px solid var(--outline); font-size: 12px; }
+.wallet-flow-panelHeader > span:first-child { font-weight: 600; }
+.wallet-flow-body { padding: 32px; }
+.wallet-flow-body h2 { margin: 0; font-size: 25px; font-weight: 600; letter-spacing: -.045em; }
+.wallet-flow-subtitle { margin: 10px 0 28px; color: var(--muted-text); font-size: 14px; line-height: 1.6; }
+.wallet-flow-badge { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; color: var(--muted-text); }
+.wallet-flow-badge::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.wallet-flow-badge[data-state="confirmed"] { color: var(--flow-success); }
+.wallet-flow-walletIcon { display: grid; place-items: center; width: 56px; height: 56px; border: 1px solid var(--outline); border-radius: 16px; margin-bottom: 24px; background: var(--background); }
+.wallet-flow-walletIcon svg { width: 26px; height: 26px; }
+.wallet-flow-permissions { margin: 24px 0; padding: 0; list-style: none; }
+.wallet-flow-permissions li { display: flex; gap: 12px; padding: 12px 0; border-top: 1px solid var(--outline); font-size: 14px; line-height: 1.5; }
+.wallet-flow-permissions li > span:first-child { color: var(--muted-text); }
+.wallet-flow-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.wallet-flow-primary, .wallet-flow-secondary { display: inline-flex; justify-content: center; align-items: center; gap: 12px; min-height: 48px; padding: 12px 20px; border: 1px solid var(--outline); border-radius: 999px; cursor: pointer; font-size: 14px; font-weight: 600; line-height: 1.5; transition: background-color 150ms ease; }
+.wallet-flow-primary { flex: 1; background: var(--foreground); color: var(--menu-bg); border-color: var(--foreground); }
+.wallet-flow-primary:hover:not(:disabled) { background: var(--muted-text); }
+.wallet-flow-secondary { background: transparent; color: var(--foreground); }
+.wallet-flow-secondary:hover:not(:disabled) { background: var(--background); }
+.wallet-flow-primary:disabled, .wallet-flow-secondary:disabled { cursor: not-allowed; opacity: .5; }
+.wallet-flow-footnote { color: var(--muted-text); font-size: 12px; line-height: 1.6; margin: 18px 0 0; }
+.wallet-flow-panelFooter { padding: 20px 32px; border-top: 1px solid var(--outline); color: var(--muted-text); font-size: 12px; line-height: 1.6; }
+.wallet-flow-address { margin: 8px 0 0; font-family: monospace; font-size: 13px; line-height: 1.8; overflow-wrap: anywhere; }
+.wallet-flow-label { font-size: 12px; color: var(--muted-text); margin: 0; }
+.wallet-flow-details { margin-top: 24px; border-block: 1px solid var(--outline); }
+.wallet-flow-details summary { padding: 16px 0; font-size: 13px; cursor: pointer; }
+.wallet-flow-details pre { margin: 0 0 16px; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 12px; line-height: 1.7; max-height: 320px; overflow: auto; }
+.wallet-flow-notice, .wallet-flow-error { padding: 14px 16px; border: 1px solid var(--outline); border-radius: 10px; margin-top: 20px; font-size: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.wallet-flow-notice { background: var(--active-bg); }
+.wallet-flow-error { border-color: var(--flow-error); color: var(--flow-error); }
+.wallet-flow-error p { margin: 0; }
+.wallet-flow-error .wallet-flow-secondary { margin-top: 12px; }
+.wallet-flow-body .wallet-flow-amount { margin: 8px 0 0; font-size: clamp(32px, 3vw, 44px); letter-spacing: -.055em; font-weight: 600; line-height: 1.2; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.wallet-flow-asset { font-size: 18px; letter-spacing: -.02em; color: var(--muted-text); }
+.wallet-flow-rows { margin: 28px 0 0; }
+.wallet-flow-row { padding: 16px 0; border-top: 1px solid var(--outline); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr); gap: 20px; }
+.wallet-flow-row dt { font-size: 12px; line-height: 1.7; color: var(--muted-text); }
+.wallet-flow-row dd { margin: 0; font-family: monospace; font-size: 12px; line-height: 1.7; text-align: right; overflow-wrap: anywhere; }
+.wallet-flow-groupTitle { margin: 28px 0 0; font-size: 12px; font-weight: 600; }
+.wallet-flow-confirm { display: flex; gap: 12px; align-items: start; margin-top: 24px; font-size: 13px; line-height: 1.6; cursor: pointer; }
+.wallet-flow-confirm input { flex: none; width: 18px; height: 18px; margin-top: 2px; accent-color: var(--foreground); }
+.wallet-flow-confirm input:focus-visible, .wallet-flow-details summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.wallet-flow-footer { display: flex; justify-content: space-between; gap: 16px; max-width: 1248px; padding: 24px 40px; margin: auto; color: var(--muted-text); font-size: 12px; }
+.wallet-flow-skeleton { height: 14px; margin: 24px 0; background: var(--outline); border-radius: 4px; }
+.wallet-flow-shell { --flow-success: #256b46; --flow-error: #a72d34; }
+@media (max-width: 900px) {
+  .wallet-flow-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); padding: 48px 24px; gap: 32px; }
+  .wallet-flow-title { font-size: 42px; }
+  .wallet-flow-body, .wallet-flow-panelHeader, .wallet-flow-panelFooter { padding: 24px; }
+  .wallet-flow-steps { margin-top: 32px; }
+}
+@media (max-width: 640px) {
+  .wallet-flow-header { min-height: 76px; padding-inline: 24px; }
+  .wallet-flow-headerLabel { display: none; }
+  .wallet-flow-layout { grid-template-columns: minmax(0, 1fr); gap: 32px; padding: 36px 24px; }
+  .wallet-flow-intro { padding: 0; }
+  .wallet-flow-eyebrow { margin-bottom: 20px; }
+  .wallet-flow-description { margin-top: 16px; max-width: none; }
+  .wallet-flow-steps { display: none; }
+  .wallet-flow-footer { padding: 20px 24px 32px; flex-direction: column; gap: 8px; }
+  .wallet-flow-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .wallet-flow-row dd { text-align: left; }
+}
+@media (prefers-reduced-motion: reduce) { .wallet-flow-primary, .wallet-flow-secondary { transition: none; } }
