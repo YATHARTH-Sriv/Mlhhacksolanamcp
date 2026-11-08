@@ -10,7 +10,7 @@ const productLinks = [
 ];
 
 const navLinks = [
-  { label: "Docs", href: "#careers" },
+  { label: "Docs", href: "https://github.com/YATHARTH-Sriv/Mlhhacksolanamcp" },
 //   { label: "About Me", href: "#blog" },
 ];
 
