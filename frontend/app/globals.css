@@ -182,28 +182,6 @@ button { font: inherit; }
   gap: 24px;
   margin-top: 32px;
 }
-.prompt-button {
-  display: inline-flex;
-  align-items: center;
-  width: 360px;
-  height: 50px;
-  padding: 0 15px;
-  border: 1px solid #08a4d7;
-  border-radius: 15px;
-  background: linear-gradient(180deg, #333537 0%, #181a1c 100%);
-  box-shadow: 0 0 0 2px rgb(4 154 207 / 26%), 0 11px 30px rgb(5 80 110 / 16%), inset 0 1px rgb(255 255 255 / 18%);
-  color: #eee;
-  cursor: pointer;
-  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
-}
-.prompt-button:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px rgb(4 154 207 / 44%), 0 14px 34px rgb(5 80 110 / 21%), inset 0 1px rgb(255 255 255 / 18%); }
-.prompt-button:active { transform: translateY(0); }
-.prompt-symbols { display: flex; align-items: center; gap: 3px; flex: none; color: #d8d9da; font-size: 20px; line-height: 1; }
-.prompt-symbols span:nth-child(2) { font-size: 18px; }
-.prompt-symbols span:nth-child(3) { font-size: 20px; }
-.prompt-label { overflow: hidden; margin-left: 17px; text-overflow: ellipsis; white-space: nowrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; font-weight: 600; letter-spacing: -0.02em; }
-.prompt-icon { display: grid; width: 28px; height: 28px; flex: none; place-items: center; margin-left: auto; border-radius: 50%; background: #3d3f41; color: #c6c8c9; }
-.prompt-icon svg { width: 17px; height: 17px; }
 .hero-secondary {
   display: inline-flex;
   align-items: center;
@@ -213,18 +191,18 @@ button { font: inherit; }
   padding: 0 10px 0 18px;
   border: 1px solid #232527;
   border-radius: 15px;
-  background: rgb(255 255 255 / 75%);
+  background: var(--foreground);
   box-shadow: 0 6px 14px rgb(0 0 0 / 6%);
-  color: var(--foreground);
+  color: var(--menu-bg);
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
   white-space: nowrap;
   transition: transform 150ms ease-out, background-color 150ms ease-out;
 }
-.hero-secondary:hover { transform: translateY(-2px); background: #fff; }
+.hero-secondary:hover { transform: translateY(-2px); background: var(--foreground); }
 .hero-secondary:active { transform: translateY(0); }
-.hero-arrow { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: #f0f1f1; }
+.hero-arrow { display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: transparent; }
 .hero-arrow svg { width: 18px; height: 18px; }
 
 .features-section {
@@ -398,7 +376,6 @@ button { font: inherit; }
   .hero-title-strong { margin-top: 5px; font-size: clamp(45px, 10vw, 62px); line-height: 1.03; }
   .hero-description { max-width: 490px; margin-top: 24px; font-size: 16px; line-height: 1.5; }
   .hero-actions { flex-direction: column; gap: 14px; margin-top: 30px; }
-  .prompt-button { width: min(100%, 360px); }
   .hero-secondary { width: min(100%, 360px); justify-content: center; }
   .features-section { padding: 255px 18px 95px; }
   .features-title { width: auto; margin: 0 0 32px; font-size: clamp(30px, 8vw, 42px); text-align: left; }

@@ -11,7 +11,6 @@ const productLinks = [
 
 const navLinks = [
   { label: "Docs", href: "#careers" },
-  { label: "Future Plans", href: "#pricing" },
 //   { label: "About Me", href: "#blog" },
 ];
 
@@ -84,8 +83,8 @@ export default function Navbar() {
 
       <div className="desktop-actions">
         <span className="nav-divider" aria-hidden="true" />
-        <a className="button button-outline" href="#book-demo">Github</a>
-        <a className="button button-dark" href="#get-started">Get Started <Arrow /></a>
+        <a className="button button-outline" href="https://github.com/YATHARTH-Sriv/Mlhhacksolanamcp">Github</a>
+        <a className="button button-dark" href="https://github.com/YATHARTH-Sriv/Mlhhacksolanamcp">Get Started <Arrow /></a>
       </div>
 
       <button className="mobile-toggle" type="button" aria-label={mobileOpen ? "Close menu" : "Open menu"} aria-controls="mobile-navigation" aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)}>
@@ -99,8 +98,8 @@ export default function Navbar() {
           {productLinks.map((link) => <a className="mobile-link mobile-sublink" key={link.label} href={link.href} onClick={() => setMobileOpen(false)}>{link.label}</a>)}
           {navLinks.map((link) => <a className="mobile-link" key={link.label} href={link.href} onClick={() => setMobileOpen(false)}>{link.label}</a>)}
           <div className="mobile-actions">
-            <a className="button button-outline" href="#book-demo" onClick={() => setMobileOpen(false)}>Book a demo</a>
-            <a className="button button-dark" href="#get-started" onClick={() => setMobileOpen(false)}>Start free <Arrow /></a>
+            <a className="button button-outline" href="https://github.com/YATHARTH-Sriv/Mlhhacksolanamcp" onClick={() => setMobileOpen(false)}>Github</a>
+            <a className="button button-dark" href="https://github.com/YATHARTH-Sriv/Mlhhacksolanamcp" onClick={() => setMobileOpen(false)}>Get Started <Arrow /></a>
           </div>
         </nav>
       )}
